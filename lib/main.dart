@@ -40,17 +40,76 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Color(0XFFF5EBE0),
+      
+      drawer: Drawer(
+        backgroundColor: Color(0XFFF5EBE0),
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Center(child: Text("test", style: TextStyle(fontSize: 30),)),
+              ),
+
+              SizedBox(height: 20,),
+
+              Container(
+                decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+                child: ListTile(
+                  tileColor: Colors.white,
+                  title: Center(child: Text("Home")),
+                ),
+              ),
+
+              SizedBox(height: 20,),
+
+               Container(
+                decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+                 child: ListTile(
+                  tileColor: Colors.white,
+                  title: Center(child: Text("Subscribe")),
+                               ),
+               ),
+
+              SizedBox(height: 20,),
+
+               Container(
+                decoration: BoxDecoration(border: Border.all(color:Colors.black)),
+                 child: ListTile(
+                  tileColor: Colors.white,
+                  title: Center(child: Text("Option 3")),
+                               ),
+               ),
+
+              SizedBox(height: 20,),
+
+              Container(
+                decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+                child: ListTile(
+                  tileColor: Colors.white,
+                  title: Center(child: Text("Option 4")),
+                ),
+              ),
+              
+          ],
+        ),
+        ),
+
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(widget.title),
+        title:Text("test"),
       ),
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed ',
+              'You have pusddh ',
             ),
             Text(
               '$_counter',
@@ -59,6 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
