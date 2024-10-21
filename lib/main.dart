@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         useMaterial3: true,
@@ -30,12 +31,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 decoration: BoxDecoration(border: Border.all(color:Colors.black)),
                  child: ListTile(
                   tileColor: Colors.white,
-                  title: Center(child: Text("Option 3")),
+                  title: Center(child: Text("Option ")),
                                ),
                ),
 
@@ -104,26 +99,52 @@ class _MyHomePageState extends State<MyHomePage> {
         title:Text("test"),
       ),
 
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pusddh ',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 30,),
+              Image.asset(
+                "assets/Dress.JPG",
+                width: 400,
+                ),
+        
+              SizedBox(height: 30,),
+              Text(
+                "FANCY DINNER? SPECIAL ANNIVERSARY?",
+                style:  TextStyle(fontSize: 17),
+                ),
+
+              Text(
+                "NIGHTS OUT? WE GOT YOU COVERED!",
+                style:  TextStyle(fontSize: 17),
+                ),
+
+              SizedBox(height: 20,),
+
+              ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.black),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "Start Renting",
+                  style: TextStyle(color: Colors.white),
+                  ),
+              ),
+
+              SizedBox(height: 40,),
+
+              Image.asset(
+                "assets/Dress2.jpg",
+                width: 400,
+                ),
+
+            ],
+          ),
         ),
       ),
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }
