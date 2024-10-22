@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/home_page.dart';
+import 'package:hackathon_app/first_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: FirstPage(),
     );
   }
 }
