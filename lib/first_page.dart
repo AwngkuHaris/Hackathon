@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/clothes_page.dart';
+import 'package:hackathon_app/favourites_page.dart';
 import 'package:hackathon_app/home_page.dart';
 import 'package:hackathon_app/subscribe_page.dart';
-import 'package:hackathon_app/test_page.dart';
+import 'package:hackathon_app/cart_page.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -17,10 +19,19 @@ class _FirstPageState extends State<FirstPage> {
     //home page
     HomePage(),
 
+    //Clothing page
+    ClothesPage(),
+
     //subscribe page
     SubscribePage(),
 
-    TestPage(),
+    //favourites page
+    FavouritesPage(),
+
+    //Cart Page
+    CartPage(),
+
+    
   ];
 
   @override
@@ -51,7 +62,7 @@ class _FirstPageState extends State<FirstPage> {
                 tileColor: Colors.white,
                 title: Row(
                   children: [
-                    Icon(Icons.home),
+                    Icon(Icons.home_outlined),
                     SizedBox(width: 8), // Spacing between icon and text
                     Text("Home"),
                   ],
@@ -69,9 +80,9 @@ class _FirstPageState extends State<FirstPage> {
                   tileColor: Colors.white,
                   title: Row(
                     children: [
-                      Icon(Icons.add_rounded),
+                      Icon(Icons.shopping_bag_outlined),
                       SizedBox(width: 8), // Spacing between icon and text
-                      Text("Subscribe"),
+                      Text("Clothing"),
                     ],
                   ),
                   onTap: () {
@@ -88,14 +99,50 @@ class _FirstPageState extends State<FirstPage> {
                   tileColor: Colors.white,
                   title: Row(
                     children: [
-                      Icon(Icons.home),
+                      Icon(Icons.add),
                       SizedBox(width: 8), // Spacing between icon and text
-                      Text("Test"),
+                      Text("Subscribe"),
                     ],
                   ),
                   onTap: () {
                     setState(() {
                       _selectedPageIndex = 2;
+                    });
+                    Navigator.pop(context);
+                  }),
+            ),
+            Container(
+              child: ListTile(
+                  tileColor: Colors.white,
+                  title: Row(
+                    children: [
+                      Icon(Icons.favorite_border),
+                      SizedBox(width: 8), // Spacing between icon and text
+                      Text("Favourites"),
+                    ],
+                  ),
+                  onTap: () {
+                    setState(() {
+                      _selectedPageIndex = 3;
+                    });
+                    Navigator.pop(context);
+                  }),
+            ),
+            Container(
+              decoration:
+                  BoxDecoration(border: Border.all(color: Colors.black)),
+              child: ListTile(
+                  tileColor: Colors.white,
+                  title: Row(
+                    children: [
+                      Icon(Icons.shopping_cart_checkout),
+                      SizedBox(width: 8), // Spacing between icon and text
+                      Text("Cart"),
+                    ],
+                  ),
+                  onTap: () {
+                    setState(() {
+                      _selectedPageIndex = 4;
                     });
                     Navigator.pop(context);
                   }),

@@ -27,7 +27,9 @@ class SubscribePage extends StatelessWidget {
               "Pause or cancel any time.",
               style: TextStyle(fontSize: 15),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 60),
+            
+            
             Container(
               decoration: BoxDecoration(
                 border: Border.all(width: 3),
@@ -226,6 +228,34 @@ class SubscribePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 50),
+            Text(
+              "YOUR MEMBERSHIP INCLUDES:",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.check_box),
+                SizedBox(width:10),
+                Text(
+              "Hundreds of designer styles",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            ),
+              ],
+            ),
+            SizedBox(height: 10,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.check_box),
+                SizedBox(width:10),
+                Text(
+              "Hundreds of designer styles",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            ),
+              ],
+            ),
           ],
         )),
       ),
