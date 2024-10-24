@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
+import 'package:hackathon_app/product1_page.dart';
 
-class ClothesPage extends StatelessWidget {
+class ClothesPage extends StatefulWidget {
   const ClothesPage({super.key});
 
+  @override
+  State<ClothesPage> createState() => _ClothesPageState();
+}
+
+class _ClothesPageState extends State<ClothesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,21 +25,21 @@ class ClothesPage extends StatelessWidget {
                   style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 60),
-                Row(
+                Row(                                          //Picture on the first row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
-                      "assets/Dress.JPG",
+                      "assets/outfit4(front).jpg",
                       width: 180,
                     ),
                     SizedBox(width: 20),
                     Image.asset(
-                      "assets/Dress.JPG",
+                      "assets/outfit3(front).jpg",
                       width: 180,
                     ),
                   ],
                 ),
-                Row(
+                Row(                                          //Info on the product on first row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
@@ -49,14 +56,32 @@ class ClothesPage extends StatelessWidget {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Auilero",
+                                "Kay Unger",
                                 style: TextStyle(
-                                    fontSize: 15, fontWeight: FontWeight.bold),
+                                    fontSize: 14, fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(width: 90),
-                              Icon(
-                                Icons.favorite_border,
-                                size: 25,
+                              SizedBox(width: 80),
+                              GestureDetector(
+                                onTap: () {
+                                  final snackBar = SnackBar(
+                                    elevation: 0,
+                                    behavior: SnackBarBehavior.floating,
+                                    backgroundColor: Colors.transparent,
+                                    content: AwesomeSnackbarContent(
+                                      title: "Added To Favourites",
+                                      message: "See all saved outfits in Favourites Page!",
+                                      contentType: ContentType.success,
+                                      color: Color.fromARGB(255, 197, 157, 134),
+                                    ),
+                                  );
+                                  ScaffoldMessenger.of(context)
+                                    ..hideCurrentSnackBar()
+                                    ..showSnackBar(snackBar);
+                                },
+                                child: Icon(
+                                  Icons.favorite_border,
+                                  size: 23,
+                                ),
                               )
                             ],
                           ),
@@ -65,12 +90,22 @@ class ClothesPage extends StatelessWidget {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Pink jacket",
+                                "Delfina Statement",
                                 style: TextStyle(fontSize: 12),
                               ),
                             ],
                           ),
-                          SizedBox(height: 30),
+                          Row(
+                            children: [
+                              SizedBox(width: 5),
+                              Text(
+                                "Sleeve Gown",
+                                style: TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
+                          
+                          SizedBox(height: 17),
                           Row(
                             children: [
                               SizedBox(width: 5),
@@ -120,23 +155,41 @@ class ClothesPage extends StatelessWidget {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Auilero",
+                                "Kay Unger",
                                 style: TextStyle(
-                                    fontSize: 15, fontWeight: FontWeight.bold),
+                                    fontSize: 14, fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(width: 90),
-                              Icon(
-                                Icons.favorite_border,
-                                size: 25,
+                              SizedBox(width: 80),
+                              GestureDetector(
+                                onTap: () {
+                                  final snackBar = SnackBar(
+                                    elevation: 0,
+                                    behavior: SnackBarBehavior.floating,
+                                    backgroundColor: Colors.transparent,
+                                    content: AwesomeSnackbarContent(
+                                      title: "Added To Favourites",
+                                      message: "See all saved outfits in Favourites Page!",
+                                      contentType: ContentType.success,
+                                      color: Color.fromARGB(255, 197, 157, 134),
+                                    ),
+                                  );
+                                  ScaffoldMessenger.of(context)
+                                    ..hideCurrentSnackBar()
+                                    ..showSnackBar(snackBar);
+                                },
+                                child: Icon(
+                                  Icons.favorite_border,
+                                  size: 23,
+                                ),
                               )
                             ],
                           ),
-                          SizedBox(height: 3),
+                          SizedBox(height: 5),
                           Row(
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Pink jacket",
+                                "Glenna Gown",
                                 style: TextStyle(fontSize: 12),
                               ),
                             ],
@@ -179,21 +232,26 @@ class ClothesPage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 60),
-                Row(
+                Row(                                          //Picture on the second row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      "assets/Dress.JPG",
-                      width: 180,
+                    GestureDetector(
+                      child: Image.asset(
+                        "assets/outfit1(front).jpg",
+                        width: 180,
+                      ),
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> ProductPage(),));
+                      },
                     ),
                     SizedBox(width: 20),
                     Image.asset(
-                      "assets/Dress.JPG",
+                      "assets/outfit2(front).jpg",
                       width: 180,
                     ),
                   ],
                 ),
-                Row(
+                Row(                                          //Info on the product on second row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
@@ -210,14 +268,33 @@ class ClothesPage extends StatelessWidget {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Auilero",
+                                "Peter Som Collective",
                                 style: TextStyle(
-                                    fontSize: 15, fontWeight: FontWeight.bold),
+                                    fontSize: 14, fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(width: 90),
-                              Icon(
-                                Icons.favorite_border,
-                                size: 25,
+                              SizedBox(width: 9),
+                              
+                              GestureDetector(
+                                onTap: () {
+                                  final snackBar = SnackBar(
+                                    elevation: 0,
+                                    behavior: SnackBarBehavior.floating,
+                                    backgroundColor: Colors.transparent,
+                                    content: AwesomeSnackbarContent(
+                                      title: "Added To Favourites",
+                                      message: "See all saved outfits in Favourites Page!",
+                                      contentType: ContentType.success,
+                                      color: Color.fromARGB(255, 197, 157, 134),
+                                    ),
+                                  );
+                                  ScaffoldMessenger.of(context)
+                                    ..hideCurrentSnackBar()
+                                    ..showSnackBar(snackBar);
+                                },
+                                child: Icon(
+                                  Icons.favorite_border,
+                                  size: 23,
+                                ),
                               )
                             ],
                           ),
@@ -226,7 +303,7 @@ class ClothesPage extends StatelessWidget {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Pink jacket",
+                                "Navy Smoked Top",
                                 style: TextStyle(fontSize: 12),
                               ),
                             ],
@@ -281,14 +358,32 @@ class ClothesPage extends StatelessWidget {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Auilero",
+                                "Peter Som Collective",
                                 style: TextStyle(
-                                    fontSize: 15, fontWeight: FontWeight.bold),
+                                    fontSize: 14, fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(width: 90),
-                              Icon(
-                                Icons.favorite_border,
-                                size: 25,
+                              SizedBox(width: 9),
+                              GestureDetector(
+                                onTap: () {
+                                  final snackBar = SnackBar(
+                                    elevation: 0,
+                                    behavior: SnackBarBehavior.floating,
+                                    backgroundColor: Colors.transparent,
+                                    content: AwesomeSnackbarContent(
+                                      title: "Added To Favourites",
+                                      message: "See all saved outfits in Favourites Page!",
+                                      contentType: ContentType.success,
+                                      color: Color.fromARGB(255, 197, 157, 134),
+                                    ),
+                                  );
+                                  ScaffoldMessenger.of(context)
+                                    ..hideCurrentSnackBar()
+                                    ..showSnackBar(snackBar);
+                                },
+                                child: Icon(
+                                  Icons.favorite_border,
+                                  size: 23,
+                                ),
                               )
                             ],
                           ),
@@ -297,7 +392,7 @@ class ClothesPage extends StatelessWidget {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Pink jacket",
+                                "Blue Floral Belted Dress",
                                 style: TextStyle(fontSize: 12),
                               ),
                             ],
@@ -338,7 +433,29 @@ class ClothesPage extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
+              SizedBox(height: 60),
+
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      child: Image.asset(
+                        "assets/outfit1(front).jpg",
+                        width: 180,
+                      ),
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> ProductPage(),));
+                      },
+                    ),
+                    SizedBox(width: 20),
+                    Image.asset(
+                      "assets/outfit1(back).jpg",
+                      width: 180,
+                    ),
+                  ],
+                ),
+
               ],
             ),
           ),

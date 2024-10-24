@@ -19,6 +19,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  awesome_snackbar_content: ^0.1.4
+
 
   flutter_lints: ^4.0.0
 
@@ -27,6 +29,17 @@ flutter:
   assets:
     - assets/Dress.JPG
     - assets/Dress2.jpg
+    - assets/outfit1(back).jpg
+    - assets/outfit1(front).jpg
+    - assets/outfit1(pose).jpg
+    - assets/outfit2(back).jpg
+    - assets/outfit2(front).jpg
+    - assets/outfit2(pose).jpg
+    - assets/outfit2(frontt).jpg
+    - assets/outfit3(back).jpg
+    - assets/outfit3(front).jpg
+    - assets/outfit3(pose).jpg
+    - assets/outfit4(front).jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
