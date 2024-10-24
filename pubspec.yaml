@@ -14,6 +14,7 @@ dependencies:
     sdk: flutter
   
   cupertino_icons: ^1.0.8
+  accordion: ^2.6.0
 
 dev_dependencies:
   flutter_test:
@@ -40,6 +41,8 @@ flutter:
     - assets/outfit3(front).jpg
     - assets/outfit3(pose).jpg
     - assets/outfit4(front).jpg
+    - assets/outfit4(back).jpg
+    - assets/outfit4(pose).jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

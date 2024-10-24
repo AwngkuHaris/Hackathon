@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:hackathon_app/product1_page.dart';
+import 'package:hackathon_app/product2_page.dart';
+import 'package:hackathon_app/product3_page.dart';
+import 'package:hackathon_app/product4_page.dart';
 
 class ClothesPage extends StatefulWidget {
   const ClothesPage({super.key});
@@ -29,14 +32,32 @@ class _ClothesPageState extends State<ClothesPage> {
                   //Picture on the first row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      "assets/outfit4(front).jpg",
-                      width: 180,
+                    GestureDetector(
+                      child: Image.asset(
+                        "assets/outfit4(front).jpg",
+                        width: 180,
+                      ),
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Product4Page(),
+                            ));
+                      },
                     ),
                     SizedBox(width: 20),
-                    Image.asset(
-                      "assets/outfit3(front).jpg",
-                      width: 180,
+                    GestureDetector(
+                      child: Image.asset(
+                        "assets/outfit3(front).jpg",
+                        width: 180,
+                      ),
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Product3Page(),
+                            ));
+                      },
                     ),
                   ],
                 ),
@@ -93,21 +114,13 @@ class _ClothesPageState extends State<ClothesPage> {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Delfina Statement",
+                                "Glenna Gown",
                                 style: TextStyle(fontSize: 12),
                               ),
                             ],
                           ),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Sleeve Gown",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 17),
+
+                          SizedBox(height: 35),
                           Row(
                             children: [
                               SizedBox(width: 5),
@@ -192,12 +205,21 @@ class _ClothesPageState extends State<ClothesPage> {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                "Glenna Gown",
+                                "Delfina Statement",
                                 style: TextStyle(fontSize: 12),
                               ),
                             ],
                           ),
-                          SizedBox(height: 30),
+                          Row(
+                            children: [
+                              SizedBox(width: 5),
+                              Text(
+                                "Sleeve Gown",
+                                style: TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 17),
                           Row(
                             children: [
                               SizedBox(width: 5),
@@ -248,14 +270,23 @@ class _ClothesPageState extends State<ClothesPage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ProductPage(),
+                              builder: (context) => Product1Page(),
                             ));
                       },
                     ),
                     SizedBox(width: 20),
-                    Image.asset(
-                      "assets/outfit2(front).jpg",
-                      width: 180,
+                    GestureDetector(
+                      child: Image.asset(
+                        "assets/outfit2(front).jpg",
+                        width: 180,
+                      ),
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Product2Page(),
+                            ));
+                      },
                     ),
                   ],
                 ),
@@ -457,7 +488,7 @@ class _ClothesPageState extends State<ClothesPage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ProductPage(),
+                              builder: (context) => Product1Page(),
                             ));
                       },
                     ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:accordion/accordion.dart';
 
-class Product1Page extends StatelessWidget {
-  const Product1Page({super.key});
+class Product2Page extends StatelessWidget {
+  const Product2Page({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,21 +26,21 @@ class Product1Page extends StatelessWidget {
                     height: 20,
                   ),
                   Image.asset(
-                    "assets/outfit1(front).jpg",
+                    "assets/outfit2(front).jpg",
                     fit: BoxFit.cover,
                   ),
                   SizedBox(
                     width: 5,
                   ),
                   Image.asset(
-                    "assets/outfit1(back).jpg",
+                    "assets/outfit2(back).jpg",
                     fit: BoxFit.cover,
                   ),
                   SizedBox(
                     width: 5,
                   ),
                   Image.asset(
-                    "assets/outfit1(pose).jpg",
+                    "assets/outfit2(pose).jpg",
                     fit: BoxFit.cover,
                   ),
                   SizedBox(
@@ -82,7 +82,7 @@ class Product1Page extends StatelessWidget {
                 SizedBox(
                   width: 8,
                 ),
-                Text("(55)"),
+                Text("(37)"),
               ],
             ),
             SizedBox(
@@ -108,7 +108,7 @@ class Product1Page extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft, // Aligns the text to the left
                 child: Text(
-                  "Navy Smoked Top",
+                  "Blue Floral Belted Dress",
                   style: TextStyle(fontSize: 15),
                 ),
               ),
@@ -216,7 +216,7 @@ class Product1Page extends StatelessWidget {
                       SizedBox(
                         width: 8,
                       ),
-                      Text("(55)"),
+                      Text("(37)"),
                     ],
                   ),
                   SizedBox(
@@ -226,7 +226,7 @@ class Product1Page extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: LinearProgressIndicator(
                       minHeight: 18,
-                      value: 0.7, // 70% progress
+                      value: 0.6, // 70% progress
                       backgroundColor: Colors.grey[300],
                       color: Colors.brown,
                     ),
@@ -253,7 +253,7 @@ class Product1Page extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: LinearProgressIndicator(
                       minHeight: 18,
-                      value: 0.6, // 70% progress
+                      value: 0.8, // 70% progress
                       backgroundColor: Colors.grey[300],
                       color: Colors.brown,
                     ),
@@ -280,7 +280,7 @@ class Product1Page extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: LinearProgressIndicator(
                       minHeight: 18,
-                      value: 0.9, // 70% progress
+                      value: 0.7, // 70% progress
                       backgroundColor: Colors.grey[300],
                       color: Colors.brown,
                     ),
@@ -314,7 +314,7 @@ class Product1Page extends StatelessWidget {
                     style: TextStyle(fontSize: 15),
                   ),
                   content: Text(
-                      "This navy top by Peter Som Collective features smocked detailing, adding texture and interest to the classic navy hue. Pair with white linen pants for a casual yet polished look.",),
+                      "This blue floral belted dress offers both style and comfort. Dress it down with sandals for daytime outings or elevate it with heels for a night out.",),
                   isOpen: true,
                   headerBorderWidth: 1,
                   headerPadding: EdgeInsets.all(15),
@@ -335,7 +335,7 @@ class Product1Page extends StatelessWidget {
                     "Materials And Measurements",
                     style: TextStyle(fontSize: 15),
                   ),
-                  content: Text("Blue cotton (97% Cotton, 3% Spandex) Tops. Crew neck. Short sleeves. Pull on. 21.5\" from shoulder to hemline. Imported. "),
+                  content: Text("Blue floral (100% Linen). Casual dress. Sweetheart neck. Sleeveless. Side zipper closure. 36\" from shoulder to hemline. Imported."),
                   headerBorderWidth: 1,
                   headerPadding: EdgeInsets.all(15),
                   headerBackgroundColor:
@@ -355,7 +355,7 @@ class Product1Page extends StatelessWidget {
                     "Size And Fit",
                     style: TextStyle(fontSize: 15),
                   ),
-                  content: Text("Sized: 0-16. Model is 5'10 and wearing a size 4. Not see through | Ties are functional | Petite friendly | Tall girl friendly | Elastic waist | Standard bra friendly | Light weight | Very stretchy | Comfortable fit | True to size | Casual office friendly"),
+                  content: Text("Sized: 0-16. Model is 5'10 and wearing a size 4.Pockets are functional | Attached belt | Lined on the inside | Petite friendly | Tall girl friendly | Standard bra friendly | Straps are not adjustable | Light weight | Side zipper | Little stretch | Comfortable fit | True to size"),
                   headerBorderWidth: 1,
                   headerPadding: EdgeInsets.all(15),
                   headerBackgroundColor:

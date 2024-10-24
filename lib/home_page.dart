@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/clothes_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +45,18 @@ class HomePage extends StatelessWidget {
                 style: ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.black),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              ClothesPage()), // ClothesPage is the new page
+                    );
+                  });
+                },
                 child: const Text(
-                  "Start Rentingg",
+                  "Start Renting",
                   style: TextStyle(color: Colors.white),
                 ),
               ),
