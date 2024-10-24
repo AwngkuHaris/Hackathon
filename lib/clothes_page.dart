@@ -25,7 +25,8 @@ class _ClothesPageState extends State<ClothesPage> {
                   style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 60),
-                Row(                                          //Picture on the first row
+                Row(
+                  //Picture on the first row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
@@ -39,7 +40,8 @@ class _ClothesPageState extends State<ClothesPage> {
                     ),
                   ],
                 ),
-                Row(                                          //Info on the product on first row
+                Row(
+                  //Info on the product on first row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
@@ -69,7 +71,8 @@ class _ClothesPageState extends State<ClothesPage> {
                                     backgroundColor: Colors.transparent,
                                     content: AwesomeSnackbarContent(
                                       title: "Added To Favourites",
-                                      message: "See all saved outfits in Favourites Page!",
+                                      message:
+                                          "See all saved outfits in Favourites Page!",
                                       contentType: ContentType.success,
                                       color: Color.fromARGB(255, 197, 157, 134),
                                     ),
@@ -104,7 +107,6 @@ class _ClothesPageState extends State<ClothesPage> {
                               ),
                             ],
                           ),
-                          
                           SizedBox(height: 17),
                           Row(
                             children: [
@@ -168,7 +170,8 @@ class _ClothesPageState extends State<ClothesPage> {
                                     backgroundColor: Colors.transparent,
                                     content: AwesomeSnackbarContent(
                                       title: "Added To Favourites",
-                                      message: "See all saved outfits in Favourites Page!",
+                                      message:
+                                          "See all saved outfits in Favourites Page!",
                                       contentType: ContentType.success,
                                       color: Color.fromARGB(255, 197, 157, 134),
                                     ),
@@ -232,7 +235,8 @@ class _ClothesPageState extends State<ClothesPage> {
                   ],
                 ),
                 SizedBox(height: 60),
-                Row(                                          //Picture on the second row
+                Row(
+                  //Picture on the second row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
@@ -241,7 +245,11 @@ class _ClothesPageState extends State<ClothesPage> {
                         width: 180,
                       ),
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> ProductPage(),));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProductPage(),
+                            ));
                       },
                     ),
                     SizedBox(width: 20),
@@ -251,7 +259,8 @@ class _ClothesPageState extends State<ClothesPage> {
                     ),
                   ],
                 ),
-                Row(                                          //Info on the product on second row
+                Row(
+                  //Info on the product on second row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
@@ -273,7 +282,6 @@ class _ClothesPageState extends State<ClothesPage> {
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),
                               SizedBox(width: 9),
-                              
                               GestureDetector(
                                 onTap: () {
                                   final snackBar = SnackBar(
@@ -282,7 +290,8 @@ class _ClothesPageState extends State<ClothesPage> {
                                     backgroundColor: Colors.transparent,
                                     content: AwesomeSnackbarContent(
                                       title: "Added To Favourites",
-                                      message: "See all saved outfits in Favourites Page!",
+                                      message:
+                                          "See all saved outfits in Favourites Page!",
                                       contentType: ContentType.success,
                                       color: Color.fromARGB(255, 197, 157, 134),
                                     ),
@@ -371,7 +380,8 @@ class _ClothesPageState extends State<ClothesPage> {
                                     backgroundColor: Colors.transparent,
                                     content: AwesomeSnackbarContent(
                                       title: "Added To Favourites",
-                                      message: "See all saved outfits in Favourites Page!",
+                                      message:
+                                          "See all saved outfits in Favourites Page!",
                                       contentType: ContentType.success,
                                       color: Color.fromARGB(255, 197, 157, 134),
                                     ),
@@ -434,9 +444,8 @@ class _ClothesPageState extends State<ClothesPage> {
                     ),
                   ],
                 ),
-              SizedBox(height: 60),
-
-              Row(
+                SizedBox(height: 60),
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
@@ -445,7 +454,11 @@ class _ClothesPageState extends State<ClothesPage> {
                         width: 180,
                       ),
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> ProductPage(),));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProductPage(),
+                            ));
                       },
                     ),
                     SizedBox(width: 20),
@@ -455,7 +468,6 @@ class _ClothesPageState extends State<ClothesPage> {
                     ),
                   ],
                 ),
-
               ],
             ),
           ),

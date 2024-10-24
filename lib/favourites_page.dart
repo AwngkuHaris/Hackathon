@@ -21,8 +21,8 @@ class FavouritesPage extends StatelessWidget {
                   contentType: ContentType.failure),
             );
             ScaffoldMessenger.of(context)
-                  ..hideCurrentSnackBar()
-                  ..showSnackBar(snackBar);
+              ..hideCurrentSnackBar()
+              ..showSnackBar(snackBar);
           },
         ),
       ),

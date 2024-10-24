@@ -30,8 +30,6 @@ class _FirstPageState extends State<FirstPage> {
 
     //Cart Page
     CartPage(),
-
-    
   ];
 
   @override
