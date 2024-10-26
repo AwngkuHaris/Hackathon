@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/CheckoutPage/checkout_page.dart';
 
 class SubscribePage extends StatelessWidget {
   const SubscribePage({super.key});
@@ -36,12 +37,12 @@ class SubscribePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
                 color: Colors.black,
               ),
-              height: 450,
+              height: 460,
               width: 350,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(height: 30),
+                  SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -109,7 +110,7 @@ class SubscribePage extends StatelessWidget {
                       ),
                       SizedBox(width: 20),
                       Text(
-                        "Retail values up to RM350",
+                        "Free Shipping and Dry Cleaning",
                         style: TextStyle(fontSize: 15, color: Colors.white),
                       )
                     ],
@@ -124,12 +125,12 @@ class SubscribePage extends StatelessWidget {
                       ),
                       SizedBox(width: 20),
                       Text(
-                        "Free Shipping And Dry Cleaning",
+                        "Pause or cancel anytime",
                         style: TextStyle(fontSize: 15, color: Colors.white),
                       )
                     ],
                   ),
-                  SizedBox(height: 40),
+                  SizedBox(height: 55),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -138,7 +139,13 @@ class SubscribePage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CheckoutPage(),
+                            ));
+                      },
                       child: Text(
                         "Get Started",
                         style: TextStyle(fontSize: 16),
@@ -205,6 +212,10 @@ class SubscribePage extends StatelessWidget {
                 ],
               ),
             ),
+
+            SizedBox(
+                    height: 50,
+                  ),
 
 
           ],

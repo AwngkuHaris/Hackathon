@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
-import 'package:hackathon_app/product1_page.dart';
-import 'package:hackathon_app/product2_page.dart';
-import 'package:hackathon_app/product3_page.dart';
-import 'package:hackathon_app/product4_page.dart';
+import 'package:hackathon_app/ProductPage/product1_page.dart';
+import 'package:hackathon_app/ProductPage/product2_page.dart';
+import 'package:hackathon_app/ProductPage/product3_page.dart';
+import 'package:hackathon_app/ProductPage/product4_page.dart';
 
 class ClothesPage extends StatefulWidget {
   const ClothesPage({super.key});

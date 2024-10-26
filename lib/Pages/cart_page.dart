@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/CheckoutPage/checkout_product1.dart';
+import 'package:hackathon_app/CheckoutPage/checkout_product3.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -34,7 +36,11 @@ class CartPage extends StatelessWidget {
                     Text("Size : M",style: TextStyle(fontSize: 12,color: Colors.white),),
                     Text("Date : 20/11/2024 - 23/11/2024",style: TextStyle(fontSize: 12,color: Colors.white),),
                     SizedBox(height: 15,),
-                    ElevatedButton(onPressed: (){}, child: Text("Proceed To Checkout",style: TextStyle(fontSize: 13),), style: ElevatedButton.styleFrom(
+                    ElevatedButton(onPressed: (){Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CheckoutProduct3(),
+                            ));}, child: Text("Proceed To Checkout",style: TextStyle(fontSize: 13),), style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.black,
                   fixedSize: Size(180, 40),
@@ -70,7 +76,11 @@ class CartPage extends StatelessWidget {
                     Text("Size : S",style: TextStyle(fontSize: 12,color: Colors.white),),
                     Text("Date : 4/12/2024 - 7/12/2024",style: TextStyle(fontSize: 12,color: Colors.white),),
                     SizedBox(height: 15,),
-                    ElevatedButton(onPressed: (){}, child: Text("Proceed To Checkout",style: TextStyle(fontSize: 13),), style: ElevatedButton.styleFrom(
+                    ElevatedButton(onPressed: (){Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CheckoutProduct1(),
+                            ));}, child: Text("Proceed To Checkout",style: TextStyle(fontSize: 13),), style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.black,
                   fixedSize: Size(180, 40),
@@ -86,13 +96,7 @@ class CartPage extends StatelessWidget {
           ),
           SizedBox(height: 50,),
 
-          ElevatedButton(onPressed: (){}, child: Text("Checkout All",style: TextStyle(fontSize: 15),), style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  foregroundColor: Colors.white,
-                  fixedSize: Size(250, 50),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                ),),
+
         ],
       ),
     );

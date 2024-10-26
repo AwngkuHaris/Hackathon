@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/clothes_page.dart';
+import 'package:hackathon_app/Pages/clothes_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});

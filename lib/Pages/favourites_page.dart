@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/product2_page.dart';
-import 'package:hackathon_app/product3_page.dart';
-import 'package:hackathon_app/product4_page.dart';
+import 'package:hackathon_app/ProductPage/product2_page.dart';
+import 'package:hackathon_app/ProductPage/product3_page.dart';
 
 class FavouritesPage extends StatefulWidget {
   const FavouritesPage({super.key});

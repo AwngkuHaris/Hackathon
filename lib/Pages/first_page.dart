@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/clothes_page.dart';
-import 'package:hackathon_app/favourites_page.dart';
-import 'package:hackathon_app/home_page.dart';
+import 'package:hackathon_app/Pages/clothes_page.dart';
+import 'package:hackathon_app/Pages/favourites_page.dart';
+import 'package:hackathon_app/Pages/home_page.dart';
 import 'package:hackathon_app/subscribe_page.dart';
-import 'package:hackathon_app/cart_page.dart';
+import 'package:hackathon_app/Pages/cart_page.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
