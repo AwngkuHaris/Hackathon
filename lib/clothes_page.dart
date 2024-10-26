@@ -476,29 +476,7 @@ class _ClothesPageState extends State<ClothesPage> {
                   ],
                 ),
                 SizedBox(height: 60),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      child: Image.asset(
-                        "assets/outfit1(front).jpg",
-                        width: 180,
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Product1Page(),
-                            ));
-                      },
-                    ),
-                    SizedBox(width: 20),
-                    Image.asset(
-                      "assets/outfit1(back).jpg",
-                      width: 180,
-                    ),
-                  ],
-                ),
+              
               ],
             ),
           ),

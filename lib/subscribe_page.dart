@@ -18,7 +18,7 @@ class SubscribePage extends StatelessWidget {
               "BECOME A MEMBER",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Text(
               "Get 5 Outfits Of Your Choice, Every Month!",
               style: TextStyle(fontSize: 15),
@@ -27,100 +27,16 @@ class SubscribePage extends StatelessWidget {
               "Pause or cancel any time.",
               style: TextStyle(fontSize: 15),
             ),
-            SizedBox(height: 60),
+            SizedBox(height: 40),
             
             
             Container(
               decoration: BoxDecoration(
                 border: Border.all(width: 3),
                 borderRadius: BorderRadius.circular(30),
-                color: Colors.blue,
-              ),
-              height: 400,
-              width: 350,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(height: 30),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "5",
-                        style: TextStyle(
-                            fontSize: 65,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      SizedBox(width: 10),
-                      Text("items per month",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white)),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    "RM90/Month",
-                    style: TextStyle(
-                        color: Colors.white, fontSize: 20, letterSpacing: 4),
-                  ),
-                  SizedBox(height: 30),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.check,
-                        color: Colors.white,
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        "data",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.check,
-                        color: Colors.white,
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        "data",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 40),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
-                        foregroundColor: Colors.white,
-                        fixedSize: Size(270, 50),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        "Get Started",
-                        style: TextStyle(fontSize: 16),
-                      ))
-                ],
-              ),
-            ),
-            SizedBox(height: 50),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(width: 3, color: Colors.white),
-                borderRadius: BorderRadius.circular(30),
                 color: Colors.black,
               ),
-              height: 500,
+              height: 450,
               width: 350,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -144,13 +60,13 @@ class SubscribePage extends StatelessWidget {
                               color: Colors.white)),
                     ],
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Text(
-                    "RM120/Month",
+                    "RM99/Month",
                     style: TextStyle(
                         color: Colors.white, fontSize: 20, letterSpacing: 4),
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -160,8 +76,41 @@ class SubscribePage extends StatelessWidget {
                       ),
                       SizedBox(width: 20),
                       Text(
-                        "data",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        "Hundreds Of Designer Styles",
+                        style: TextStyle(fontSize: 15, color: Colors.white),
+                      )
+                      
+                    ],
+                  ),
+                  
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.check,
+                        color: Colors.white,
+                      ),
+                      SizedBox(width: 20),
+                      Text(
+                        "5 items/month",
+                        style: TextStyle(fontSize: 15, color: Colors.white),
+                      )
+                    ],
+                  ),
+
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.check,
+                        color: Colors.white,
+                      ),
+                      SizedBox(width: 20),
+                      Text(
+                        "Retail values up to RM350",
+                        style: TextStyle(fontSize: 15, color: Colors.white),
                       )
                     ],
                   ),
@@ -175,38 +124,8 @@ class SubscribePage extends StatelessWidget {
                       ),
                       SizedBox(width: 20),
                       Text(
-                        "data",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.check,
-                        color: Colors.white,
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        "data",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.check,
-                        color: Colors.white,
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        "data",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        "Free Shipping And Dry Cleaning",
+                        style: TextStyle(fontSize: 15, color: Colors.white),
                       )
                     ],
                   ),
@@ -227,35 +146,67 @@ class SubscribePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 30),
+
             Text(
-              "YOUR MEMBERSHIP INCLUDES:",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  "Mix And Match 5 Different Outfits,",
+                  style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold ),
+                  ),
+            Text(
+                  "Every Month!",
+                  style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+
+            SizedBox(height: 10),
+
+            SizedBox(
+              height: 400,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image.asset(
+                    "assets/outfit1(pose).jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 1,
+                  ),
+                  Image.asset(
+                    "assets/outfit2(pose).jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 1,
+                  ),
+                  Image.asset(
+                    "assets/outfit4(pose).jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 1,
+                  ),
+                  Image.asset(
+                    "assets/outfit3(pose).jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 1,
+                  ),
+                  Image.asset(
+                    "assets/Dress2.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                ],
+              ),
             ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.check_box),
-                SizedBox(width:10),
-                Text(
-              "Hundreds of designer styles",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-            ),
-              ],
-            ),
-            SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.check_box),
-                SizedBox(width:10),
-                Text(
-              "Hundreds of designer styles",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-            ),
-              ],
-            ),
+
+
           ],
         )),
       ),

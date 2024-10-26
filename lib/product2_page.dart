@@ -307,6 +307,7 @@ class Product2Page extends StatelessWidget {
               height: 40,
             ),
             Accordion(
+              disableScrolling: true,
               children: [
                 AccordionSection(
                   header: Text(
@@ -329,6 +330,7 @@ class Product2Page extends StatelessWidget {
               ],
             ),
             Accordion(
+              disableScrolling: true,
               children: [
                 AccordionSection(
                   header: Text(
@@ -349,6 +351,7 @@ class Product2Page extends StatelessWidget {
               ],
             ),
             Accordion(
+              disableScrolling: true,
               children: [
                 AccordionSection(
                   header: Text(

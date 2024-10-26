@@ -1,8 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:accordion/accordion.dart';
+import 'package:hackathon_app/Util/date_n_size_picker.dart';
 
-class Product1Page extends StatelessWidget {
+
+class Product1Page extends StatefulWidget {
   const Product1Page({super.key});
+
+  @override
+  State<Product1Page> createState() => _Product1PageState();
+}
+
+class _Product1PageState extends State<Product1Page> {
+
+  void _showDatePicker(){
+    showDatePicker(
+      context: context,
+      firstDate: DateTime.now(),
+      lastDate: DateTime(2025));
+  }
+
+  void _chooseSizeAndDate(){
+    showDialog(context: context, builder: (context){
+      return DateNSizePicker();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -153,7 +174,9 @@ class Product1Page extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  _chooseSizeAndDate();
+                },
                 child: Text(
                   "Rent Outfit",
                   style: TextStyle(fontSize: 17),
@@ -307,6 +330,7 @@ class Product1Page extends StatelessWidget {
               height: 40,
             ),
             Accordion(
+              disableScrolling: true,
               children: [
                 AccordionSection(
                   header: Text(
@@ -329,6 +353,7 @@ class Product1Page extends StatelessWidget {
               ],
             ),
             Accordion(
+              disableScrolling: true,
               children: [
                 AccordionSection(
                   header: Text(
@@ -349,6 +374,7 @@ class Product1Page extends StatelessWidget {
               ],
             ),
             Accordion(
+              disableScrolling: true,
               children: [
                 AccordionSection(
                   header: Text(

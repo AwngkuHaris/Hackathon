@@ -150,7 +150,8 @@ class _FirstPageState extends State<FirstPage> {
       ),
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("test"),
+        title: Text("MyOutfit",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
+      ),
       ),
       body: _pages[_selectedPageIndex],
     );

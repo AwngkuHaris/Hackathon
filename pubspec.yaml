@@ -13,14 +13,15 @@ dependencies:
   flutter:
     sdk: flutter
   
+  date_range_form_field: ^1.0.2
   cupertino_icons: ^1.0.8
   accordion: ^2.6.0
+  awesome_snackbar_content: ^0.1.1
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  awesome_snackbar_content: ^0.1.4
 
 
   flutter_lints: ^4.0.0
@@ -43,6 +44,8 @@ flutter:
     - assets/outfit4(front).jpg
     - assets/outfit4(back).jpg
     - assets/outfit4(pose).jpg
+    - assets/checkout.jpg
+    - assets/checkout2.jpeg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
