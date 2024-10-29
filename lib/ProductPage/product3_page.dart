@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:accordion/accordion.dart';
+import 'package:hackathon_app/Util/date_n_size_picker.dart';   // Import the DateNSizePicker widget
 
-class Product3Page extends StatelessWidget {
+class Product3Page extends StatefulWidget {
   const Product3Page({super.key});
+
+  @override
+  State<Product3Page> createState() => _Product3PageState();
+}
+
+class _Product3PageState extends State<Product3Page> {
+
+      // Function to open the date and size picker dialog when the "Rent Outfit" button is clicked
+  void _chooseSizeAndDate(){    
+    showDialog(context: context, builder: (context){
+      return DateNSizePicker();   // Displays a dialog for choosing size and date
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -153,7 +167,9 @@ class Product3Page extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  _chooseSizeAndDate();
+                },
                 child: Text(
                   "Rent Outfit",
                   style: TextStyle(fontSize: 17),

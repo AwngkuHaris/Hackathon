@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/Pages/clothes_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -28,45 +27,67 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(   //vertical spacing between image and text
-                height: 30,
+                height: 40,
               ),
               Text(
                 "FANCY DINNER? SPECIAL ANNIVERSARY?",
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Text(
                 "NIGHTS OUT? WE GOT YOU COVERED!",
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(   // Create an elevated button  
-                style: ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(Colors.black),
-                ),
-                onPressed: () {
-                  setState(() {
-                    Navigator.push(   // Navigate to the ClothesPage when the button is pressed
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              ClothesPage()), // Navigate to ClothesPage
-                    );
-                  });
-                },
-                child: const Text(
-                  "Start Renting",
-                  style: TextStyle(color: Colors.white),
-                ),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 40,
               ),
-              Image.asset(
-                "assets/Dress2.jpg",    // Load the image from the assets folder
-                width: 400,   //set image width
+              
+
+              SizedBox(
+              height: 400,
+              child: ListView(
+                scrollDirection: Axis.horizontal,   // Horizontal scrolling
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image.asset(
+                    "assets/outfit1(pose).jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),    
+                  Image.asset(
+                    "assets/Dress2.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    "assets/outfit4(pose).jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    "assets/outfit2(pose).jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    "assets/outfit3(pose).jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                ],
               ),
+            ),
             ],
           ),
         ),

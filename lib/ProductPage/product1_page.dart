@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:accordion/accordion.dart';
-import 'package:hackathon_app/Util/date_n_size_picker.dart';    // Import the DateNSizePicker widget
+import 'package:hackathon_app/Util/date_n_size_picker.dart';   // Import the DateNSizePicker widget
 
 
 class Product1Page extends StatefulWidget {

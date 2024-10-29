@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,  //remove the debug banner from the app
-      title: 'Flutter Demo',  //set the title of the app 
+      title: 'MyOutfit',  //set the title of the app 
       theme: ThemeData(
         useMaterial3: true,
       ),
