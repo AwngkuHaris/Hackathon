@@ -3,7 +3,7 @@ import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:hackathon_app/ProductPage/product1_page.dart';
 import 'package:hackathon_app/ProductPage/product2_page.dart';
 import 'package:hackathon_app/ProductPage/product3_page.dart';
-import 'package:hackathon_app/ProductPage/product4_page.dart';
+import 'package:hackathon_app/ProductPage/product4_page.dart';    //Importing the Products Page
 
 class ClothesPage extends StatefulWidget {
   const ClothesPage({super.key});
@@ -16,13 +16,13 @@ class _ClothesPageState extends State<ClothesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0XFFF5EBE0),
-        body: SingleChildScrollView(
+        backgroundColor: Color(0XFFF5EBE0),   // Set background color for the page
+        body: SingleChildScrollView(    // Allow scrolling for the entire content
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: 50),
+                SizedBox(height: 50),   //vertical spacing from the top
                 Text(
                   "Choose Your Favourite Outfit!",
                   style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
@@ -32,13 +32,13 @@ class _ClothesPageState extends State<ClothesPage> {
                   //Picture on the first row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    GestureDetector(
+                    GestureDetector(    //Detect if the image is tapped
                       child: Image.asset(
                         "assets/outfit4(front).jpg",
                         width: 180,
                       ),
                       onTap: (){
-                        Navigator.push(
+                        Navigator.push(   // Navigate to Product4Page on image press
                             context,
                             MaterialPageRoute(
                               builder: (context) => Product4Page(),
@@ -52,7 +52,7 @@ class _ClothesPageState extends State<ClothesPage> {
                         width: 180,
                       ),
                       onTap: (){
-                        Navigator.push(
+                        Navigator.push(   // Navigate to Product3Page on image press
                             context,
                             MaterialPageRoute(
                               builder: (context) => Product3Page(),
@@ -65,12 +65,12 @@ class _ClothesPageState extends State<ClothesPage> {
                   //Info on the product on first row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    Container(    //container for the product info
                       decoration: BoxDecoration(
                         border: Border.all(),
                         color: Colors.white,
                       ),
-                      width: 180,
+                      width: 180,   //width and height of the container
                       height: 140,
                       child: Column(
                         children: [
@@ -84,9 +84,9 @@ class _ClothesPageState extends State<ClothesPage> {
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),
                               SizedBox(width: 80),
-                              GestureDetector(
-                                onTap: () {
-                                  final snackBar = SnackBar(
+                              GestureDetector(    //Detect if the icon is pressed
+                                onTap: () {   
+                                  final snackBar = SnackBar(    //Display snackbar if the favourite icon is tapped
                                     elevation: 0,
                                     behavior: SnackBarBehavior.floating,
                                     backgroundColor: Colors.transparent,
@@ -102,7 +102,7 @@ class _ClothesPageState extends State<ClothesPage> {
                                     ..hideCurrentSnackBar()
                                     ..showSnackBar(snackBar);
                                 },
-                                child: Icon(
+                                child: Icon( 
                                   Icons.favorite_border,
                                   size: 23,
                                 ),

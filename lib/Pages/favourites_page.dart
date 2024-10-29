@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/ProductPage/product2_page.dart';
-import 'package:hackathon_app/ProductPage/product3_page.dart';
+import 'package:hackathon_app/ProductPage/product2_page.dart';      //Importing the Product2Page
+import 'package:hackathon_app/ProductPage/product3_page.dart';      //Importing the Product3Page
 
 class FavouritesPage extends StatefulWidget {
   const FavouritesPage({super.key});
@@ -13,20 +13,19 @@ class _FavouritesPageState extends State<FavouritesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0XFFF5EBE0),
-        body: SingleChildScrollView(
+        backgroundColor: Color(0XFFF5EBE0),   // Set background color for the page
+        body: SingleChildScrollView(    // Allow scrolling for the entire content
           child: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,   
               children: [
-                SizedBox(height: 50),
+                SizedBox(height: 50),   //vertical spacing from the top
                 Text(
                   "FAVOURITES",
                   style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 60),
-                Row(
-                  //Picture on the first row
+                Row(    //Pictures on the first row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
@@ -35,7 +34,7 @@ class _FavouritesPageState extends State<FavouritesPage> {
                         width: 180,
                       ),
                       onTap: (){
-                        Navigator.push(
+                        Navigator.push(   // Navigate to Product2Page on button press
                             context,
                             MaterialPageRoute(
                               builder: (context) => Product2Page(),
@@ -49,7 +48,7 @@ class _FavouritesPageState extends State<FavouritesPage> {
                         width: 180,
                       ),
                       onTap: (){
-                        Navigator.push(
+                        Navigator.push(   // Navigate to Product3Page on button press
                             context,
                             MaterialPageRoute(
                               builder: (context) => Product3Page(),
@@ -58,8 +57,7 @@ class _FavouritesPageState extends State<FavouritesPage> {
                     ),
                   ],
                 ),
-                Row(
-                  //Info on the product on first row
+                Row(    //Info on the product on first row
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
@@ -117,25 +115,25 @@ class _FavouritesPageState extends State<FavouritesPage> {
                                 "Retail Value",
                                 style: TextStyle(
                                     fontSize: 12,
-                                    color: Colors.black.withOpacity(0.4)),
+                                    color: Colors.black.withOpacity(0.4)),    //Make the text a bit transparent 
                               ),
                               SizedBox(width: 60),
                               Text("RM350",
                                   style: TextStyle(
                                       fontSize: 12,
-                                      color: Colors.black.withOpacity(0.4))),
+                                      color: Colors.black.withOpacity(0.4))),   //Make the text a bit transparent 
                             ],
                           ),
                         ],
                       ),
                     ),
                     SizedBox(width: 20),
-                    Container(
+                    Container(    //container for the product info
                       decoration: BoxDecoration(
                         border: Border.all(),
                         color: Colors.white,
                       ),
-                      width: 180,
+                      width: 180,   //width and height for the product info container
                       height: 140,
                       child: Column(
                         children: [
@@ -148,8 +146,6 @@ class _FavouritesPageState extends State<FavouritesPage> {
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),
-                              
-
                             ],
                           ),
                           SizedBox(height: 5),
@@ -194,13 +190,13 @@ class _FavouritesPageState extends State<FavouritesPage> {
                                 "Retail Value",
                                 style: TextStyle(
                                     fontSize: 12,
-                                    color: Colors.black.withOpacity(0.4)),
+                                    color: Colors.black.withOpacity(0.4)),    //Make the text a bit transparent
                               ),
                               SizedBox(width: 60),
                               Text("RM350",
                                   style: TextStyle(
                                       fontSize: 12,
-                                      color: Colors.black.withOpacity(0.4))),
+                                      color: Colors.black.withOpacity(0.4))),   //Make the text a bit transparent
                             ],
                           ),
                         ],

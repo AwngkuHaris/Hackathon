@@ -1,25 +1,25 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/CheckoutPage/checkout_subscription.dart';
+import 'package:hackathon_app/CheckoutPage/checkout_subscription.dart';  //Importing the CheckoutPage
 
 class SubscribePage extends StatelessWidget {
   const SubscribePage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFFF5EBE0),
-      body: SingleChildScrollView(
+      backgroundColor: Color(0XFFF5EBE0),   // Set background color for the page
+      body: SingleChildScrollView(    // Allow scrolling for the entire content
         child: Center(
             child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,    // Center the column content vertically
           children: [
-            SizedBox(height: 50),
-            Text(
+            SizedBox(height: 50), // vertical space from the top
+            Text(   
               "BECOME A MEMBER",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),    // Set text size and bold font
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20),   // Add vertical spacing
             Text(
               "Get 5 Outfits Of Your Choice, Every Month!",
               style: TextStyle(fontSize: 15),
@@ -28,22 +28,22 @@ class SubscribePage extends StatelessWidget {
               "Pause or cancel any time.",
               style: TextStyle(fontSize: 15),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 40),   // Add vertical spacing
             
             
-            Container(
+            Container(    // Subscription plan container
               decoration: BoxDecoration(
-                border: Border.all(width: 3),
-                borderRadius: BorderRadius.circular(30),
-                color: Colors.black,
+                border: Border.all(width: 3),   // Add border with a width of 3
+                borderRadius: BorderRadius.circular(30),    // Rounded corners with radius 30
+                color: Colors.black,    // Background color for the container
               ),
-              height: 460,
-              width: 350,
+              height: 460,    // Height of the container
+              width: 350,   // Width of the container
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,   // Align items at the start
                 children: [
                   SizedBox(height: 20),
-                  Row(
+                  Row(    // Row showing '5 items per month'
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
@@ -53,29 +53,29 @@ class SubscribePage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),
-                      SizedBox(width: 10),
-                      Text("items per month",
+                      SizedBox(width: 10),    // Add spacing between '5' and 'items per month'
+                      Text("items per month",   // Display the subscription details
                           style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
                               color: Colors.white)),
                     ],
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 5),    // Add vertical spacing
                   Text(
-                    "RM99/Month",
+                    "RM99/Month",   // Price of the subscription
                     style: TextStyle(
                         color: Colors.white, fontSize: 20, letterSpacing: 4),
                   ),
                   SizedBox(height: 50),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,    // Center icons and text
                     children: [
                       Icon(
                         Icons.check,
                         color: Colors.white,
                       ),
-                      SizedBox(width: 20),
+                      SizedBox(width: 20),    // Spacing between icon and text
                       Text(
                         "Hundreds Of Designer Styles",
                         style: TextStyle(fontSize: 15, color: Colors.white),
@@ -131,16 +131,16 @@ class SubscribePage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 55),
-                  ElevatedButton(
+                  ElevatedButton(   // 'Get Started' Button
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        foregroundColor: Colors.black,
-                        fixedSize: Size(270, 50),
+                        backgroundColor: Colors.white,    // Button background color
+                        foregroundColor: Colors.black,    // Button text color
+                        fixedSize: Size(270, 50),   // Set button size
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(10)),   // Rounded corners for button
                       ),
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.push(   // Navigate to CheckoutPage on button press
                             context,
                             MaterialPageRoute(
                               builder: (context) => CheckoutPage(),
@@ -169,7 +169,7 @@ class SubscribePage extends StatelessWidget {
             SizedBox(
               height: 400,
               child: ListView(
-                scrollDirection: Axis.horizontal,
+                scrollDirection: Axis.horizontal,   // Horizontal scrolling
                 children: [
                   SizedBox(
                     height: 20,

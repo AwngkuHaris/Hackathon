@@ -12,22 +12,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFFF5EBE0),
-      body: SingleChildScrollView(
-        child: Center(
+      backgroundColor: Color(0XFFF5EBE0),   // set the scaffold color
+      body: SingleChildScrollView(    // enable scrolling function
+        child: Center(    // center the content
           child: Column(
             children: <Widget>[
               SizedBox(
                 height: 30,
               ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(20),
+              ClipRRect(    // clip the image with rounded corners
+                borderRadius: BorderRadius.circular(20),    // set corner radius
                 child: Image.asset(
-                  "assets/Dress.JPG",
-                  width: 350,
+                  "assets/Dress.JPG",   // Load the image from the assets folder
+                  width: 350,   // set image width 
                 ),
               ),
-              SizedBox(
+              SizedBox(   //vertical spacing between image and text
                 height: 30,
               ),
               Text(
@@ -41,17 +41,17 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 20,
               ),
-              ElevatedButton(
+              ElevatedButton(   // Create an elevated button  
                 style: ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.black),
                 ),
                 onPressed: () {
                   setState(() {
-                    Navigator.push(
+                    Navigator.push(   // Navigate to the ClothesPage when the button is pressed
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              ClothesPage()), // ClothesPage is the new page
+                              ClothesPage()), // Navigate to ClothesPage
                     );
                   });
                 },
@@ -64,8 +64,8 @@ class _HomePageState extends State<HomePage> {
                 height: 40,
               ),
               Image.asset(
-                "assets/Dress2.jpg",
-                width: 400,
+                "assets/Dress2.jpg",    // Load the image from the assets folder
+                width: 400,   //set image width
               ),
             ],
           ),

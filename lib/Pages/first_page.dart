@@ -35,12 +35,12 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: Drawer(
-        backgroundColor: Color(0XFFF5EBE0),
+      endDrawer: Drawer( //create a drawer at the right side of the screen
+        backgroundColor: Color(0XFFF5EBE0),  //set drawer color
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
+            const DrawerHeader(  //set drawer header
               decoration: BoxDecoration(
                 color: Colors.white,
               ),
@@ -53,7 +53,7 @@ class _FirstPageState extends State<FirstPage> {
             SizedBox(
               height: 20,
             ),
-            Container(
+            Container( //create list tile for the home page
               decoration:
                   BoxDecoration(border: Border.all(color: Colors.black)),
               child: ListTile(
@@ -67,13 +67,13 @@ class _FirstPageState extends State<FirstPage> {
                 ),
                 onTap: () {
                   setState(() {
-                    _selectedPageIndex = 0;
+                    _selectedPageIndex = 0;  //page index for homepage is 0
                   });
-                  Navigator.pop(context);
+                  Navigator.pop(context);   //pop the menu back into place 
                 },
               ),
             ),
-            Container(
+            Container(    //create list tile for the clothing page
               child: ListTile(
                   tileColor: Colors.white,
                   title: Row(
@@ -85,12 +85,12 @@ class _FirstPageState extends State<FirstPage> {
                   ),
                   onTap: () {
                     setState(() {
-                      _selectedPageIndex = 1;
+                      _selectedPageIndex = 1;    //page index for clothing page is 1
                     });
-                    Navigator.pop(context);
+                    Navigator.pop(context);   //pop the menu back into place 
                   }),
             ),
-            Container(
+            Container(    //create list tile for the subscribe page
               decoration:
                   BoxDecoration(border: Border.all(color: Colors.black)),
               child: ListTile(
@@ -104,12 +104,12 @@ class _FirstPageState extends State<FirstPage> {
                   ),
                   onTap: () {
                     setState(() {
-                      _selectedPageIndex = 2;
+                      _selectedPageIndex = 2;   //page index for subscribe page is 2
                     });
-                    Navigator.pop(context);
+                    Navigator.pop(context);   //pop the menu back into place 
                   }),
             ),
-            Container(
+            Container(    //create list tile for the favourites page
               child: ListTile(
                   tileColor: Colors.white,
                   title: Row(
@@ -121,12 +121,12 @@ class _FirstPageState extends State<FirstPage> {
                   ),
                   onTap: () {
                     setState(() {
-                      _selectedPageIndex = 3;
+                      _selectedPageIndex = 3;   //page index for favourites page is 3
                     });
-                    Navigator.pop(context);
+                    Navigator.pop(context);   //pop the menu back into place 
                   }),
             ),
-            Container(
+            Container(    //create list tile for the cart page
               decoration:
                   BoxDecoration(border: Border.all(color: Colors.black)),
               child: ListTile(
@@ -140,20 +140,20 @@ class _FirstPageState extends State<FirstPage> {
                   ),
                   onTap: () {
                     setState(() {
-                      _selectedPageIndex = 4;
+                      _selectedPageIndex = 4;   //page index for cart page is 4
                     });
-                    Navigator.pop(context);
+                    Navigator.pop(context);   //pop the menu back into place
                   }),
             ),
           ],
         ),
       ),
-      appBar: AppBar(
+      appBar: AppBar(   //set the appbar properties
         backgroundColor: Colors.white,
         title: Text("MyOutfit",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
       ),
       ),
-      body: _pages[_selectedPageIndex],
+      body: _pages[_selectedPageIndex],   //show the body based on the current page index
     );
   }
 }
