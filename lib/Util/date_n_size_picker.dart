@@ -33,12 +33,7 @@ class _DateNSizePickerState extends State<DateNSizePicker> {
             SizedBox(
               height: 30,
             ),
-
-
-
-
-
-
+            
             SizedBox(
               height: 50,
             ),

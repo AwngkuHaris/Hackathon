@@ -12,13 +12,6 @@ class Product1Page extends StatefulWidget {
 
 class _Product1PageState extends State<Product1Page> {
 
-  void _showDatePicker(){
-    showDatePicker(
-      context: context,
-      firstDate: DateTime.now(),
-      lastDate: DateTime(2025));
-  }
-
   void _chooseSizeAndDate(){
     showDialog(context: context, builder: (context){
       return DateNSizePicker();

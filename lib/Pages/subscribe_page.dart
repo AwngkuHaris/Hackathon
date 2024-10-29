@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/CheckoutPage/checkout_page.dart';
+import 'package:hackathon_app/CheckoutPage/checkout_subscription.dart';
 
 class SubscribePage extends StatelessWidget {
   const SubscribePage({super.key});

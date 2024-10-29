@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/Util/successful.dart';
 
-class CheckoutProduct1 extends StatelessWidget {
+class CheckoutProduct1 extends StatefulWidget {
   const CheckoutProduct1({super.key});
 
+  @override
+  State<CheckoutProduct1> createState() => _CheckoutProduct1State();
+}
+
+class _CheckoutProduct1State extends State<CheckoutProduct1> {
+  void _successfulCheckout(){
+    showDialog(context: context, builder: (context){
+      return SuccessfulCheckout();
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -230,7 +241,9 @@ class CheckoutProduct1 extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              _successfulCheckout();
+                            },
                             child: Text(
                               "Place Order",
                               style: TextStyle(fontSize: 15),
