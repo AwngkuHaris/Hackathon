@@ -37,7 +37,7 @@ class SubscribePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),    // Rounded corners with radius 30
                 color: Colors.black,    // Background color for the container
               ),
-              height: 460,    // Height of the container
+              height: 480,    // Height of the container
               width: 350,   // Width of the container
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,   // Align items at the start

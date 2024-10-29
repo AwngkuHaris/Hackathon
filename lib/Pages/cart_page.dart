@@ -21,7 +21,7 @@ class CartPage extends StatelessWidget {
             child: Row(
               children: [
                 SizedBox(
-                  height: 200,child: Image.asset("assets/checkout.jpg", fit: BoxFit.cover,)),   // Image for the product in cart
+                  height: 150,child: Image.asset("assets/checkout.jpg", fit: BoxFit.cover,)),   // Image for the product in cart
 
                 SizedBox(width: 25,),
 
@@ -40,7 +40,7 @@ class CartPage extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => CheckoutProduct3(),
-                            ));}, child: Text("Proceed To Checkout",style: TextStyle(fontSize: 13),), style: ElevatedButton.styleFrom(
+                            ));}, child: Text("Proceed To Checkout",style: TextStyle(fontSize: 12),), style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.black,
                   fixedSize: Size(180, 40),
@@ -61,7 +61,7 @@ class CartPage extends StatelessWidget {
             child: Row(
               children: [
                 SizedBox(
-                  height: 200,child: Image.asset("assets/checkout2.jpeg", fit: BoxFit.cover,)),
+                  height: 150,child: Image.asset("assets/checkout2.jpeg", fit: BoxFit.cover,)),
 
                 SizedBox(width: 25,),
 
@@ -80,7 +80,7 @@ class CartPage extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => CheckoutProduct1(),
-                            ));}, child: Text("Proceed To Checkout",style: TextStyle(fontSize: 13),), style: ElevatedButton.styleFrom(
+                            ));}, child: Text("Proceed To Checkout",style: TextStyle(fontSize: 12),), style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.black,
                   fixedSize: Size(180, 40),

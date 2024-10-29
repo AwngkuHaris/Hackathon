@@ -95,7 +95,7 @@ class _DateNSizePickerState extends State<DateNSizePicker> {
             if (startDate != null && endDate != null)
               Text(
                 'Rental Dates: ${DateFormat('dd-MM-yyyy').format(startDate!)} to ${DateFormat('dd-MM-yyyy').format(endDate!)}',
-                style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
               ),
 
             SizedBox(height: 80),
@@ -164,7 +164,7 @@ class _DateNSizePickerState extends State<DateNSizePicker> {
                   },
                   child: Text(
                     "Add To Cart",
-                    style: TextStyle(fontSize: 14),
+                    style: TextStyle(fontSize: 13),
                   ),
                 ),
               ],

@@ -27,459 +27,417 @@ class _ClothesPageState extends State<ClothesPage> {
                   "Choose Your Favourite Outfit!",
                   style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 60),
-                Row(
-                  //Picture on the first row
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(    //Detect if the image is tapped
-                      child: Image.asset(
-                        "assets/outfit4(front).jpg",
-                        width: 180,
-                      ),
-                      onTap: (){
-                        Navigator.push(   // Navigate to Product4Page on image press
+                SizedBox(height: 50),
+
+
+                GestureDetector(child: Image.asset("assets/outfit4(front).jpg",width: 400, height: 400,), onTap: (){Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => Product4Page(),
-                            ));
-                      },
-                    ),
-                    SizedBox(width: 20),
-                    GestureDetector(
-                      child: Image.asset(
-                        "assets/outfit3(front).jpg",
-                        width: 180,
+                            ));},),
+                Container(    //container for the product info
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          color: Colors.white,
+                        ),
+                        width: 270,   //width and height of the container
+                        height: 160,
+                        child: Column(
+                          children: [
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Kay Unger",
+                                  style: TextStyle(
+                                      fontSize: 16, fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(width: 140),   //Space between the brand name and icon
+                                
+                                  GestureDetector(    //Detect if the icon is pressed
+                                    onTap: () {   
+                                      final snackBar = SnackBar(    //Display snackbar if the favourite icon is tapped
+                                        elevation: 0,
+                                        behavior: SnackBarBehavior.floating,
+                                        backgroundColor: Colors.transparent,
+                                        content: AwesomeSnackbarContent(
+                                          title: "Added To Favourites",
+                                          message:
+                                              "See all saved outfits in Favourites Page!",
+                                          contentType: ContentType.success,
+                                          color: Color.fromARGB(255, 197, 157, 134),
+                                        ),
+                                      );
+                                      ScaffoldMessenger.of(context)
+                                        ..hideCurrentSnackBar()
+                                        ..showSnackBar(snackBar);
+                                    },
+                                    child: Icon( 
+                                      Icons.favorite_border,
+                                      size: 25,
+                                    ),
+                                  ),
+                                
+                              ],
+                            ),
+                            SizedBox(height: 3),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Glenna Gown",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ],
+                            ),
+                      
+                            SizedBox(height: 35),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Rent From",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                                SizedBox(width: 140),
+                                Text(
+                                  "RM30",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 3),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Retail Value",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      color: Colors.black.withOpacity(0.4)),
+                                ),
+                                SizedBox(width: 125),
+                                Text("RM350",
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        color: Colors.black.withOpacity(0.4))),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                      onTap: (){
-                        Navigator.push(   // Navigate to Product3Page on image press
+                
+
+                SizedBox(height: 50,),
+                GestureDetector(child: Image.asset("assets/outfit3(front).jpg",width: 400, height: 400,), onTap: (){Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => Product3Page(),
-                            ));
-                      },
-                    ),
-                  ],
-                ),
-                Row(
-                  //Info on the product on first row
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(    //container for the product info
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                        color: Colors.white,
-                      ),
-                      width: 180,   //width and height of the container
-                      height: 140,
-                      child: Column(
-                        children: [
-                          SizedBox(height: 5),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Kay Unger",
-                                style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(width: 80),
-                              GestureDetector(    //Detect if the icon is pressed
-                                onTap: () {   
-                                  final snackBar = SnackBar(    //Display snackbar if the favourite icon is tapped
-                                    elevation: 0,
-                                    behavior: SnackBarBehavior.floating,
-                                    backgroundColor: Colors.transparent,
-                                    content: AwesomeSnackbarContent(
-                                      title: "Added To Favourites",
-                                      message:
-                                          "See all saved outfits in Favourites Page!",
-                                      contentType: ContentType.success,
-                                      color: Color.fromARGB(255, 197, 157, 134),
-                                    ),
-                                  );
-                                  ScaffoldMessenger.of(context)
-                                    ..hideCurrentSnackBar()
-                                    ..showSnackBar(snackBar);
-                                },
-                                child: Icon( 
-                                  Icons.favorite_border,
-                                  size: 23,
+                            ));},),
+                Container(    //container for the product info
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          color: Colors.white,
+                        ),
+                        width: 270,   //width and height of the container
+                        height: 160,
+                        child: Column(
+                          children: [
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Kay Unger",
+                                  style: TextStyle(
+                                      fontSize: 16, fontWeight: FontWeight.bold),
                                 ),
-                              )
-                            ],
-                          ),
-                          SizedBox(height: 3),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Glenna Gown",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
+                                SizedBox(width: 140),   //Space between the brand name and icon
+                                
+                                  GestureDetector(    //Detect if the icon is pressed
+                                    onTap: () {   
+                                      final snackBar = SnackBar(    //Display snackbar if the favourite icon is tapped
+                                        elevation: 0,
+                                        behavior: SnackBarBehavior.floating,
+                                        backgroundColor: Colors.transparent,
+                                        content: AwesomeSnackbarContent(
+                                          title: "Added To Favourites",
+                                          message:
+                                              "See all saved outfits in Favourites Page!",
+                                          contentType: ContentType.success,
+                                          color: Color.fromARGB(255, 197, 157, 134),
+                                        ),
+                                      );
+                                      ScaffoldMessenger.of(context)
+                                        ..hideCurrentSnackBar()
+                                        ..showSnackBar(snackBar);
+                                    },
+                                    child: Icon( 
+                                      Icons.favorite_border,
+                                      size: 25,
+                                    ),
+                                  ),
+                                
+                              ],
+                            ),
+                            SizedBox(height: 3),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Delfina Statement Sleeve Gown",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ],
+                            ),
+                      
+                            SizedBox(height: 35),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Rent From",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                                SizedBox(width: 140),
+                                Text(
+                                  "RM30",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 3),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Retail Value",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      color: Colors.black.withOpacity(0.4)),
+                                ),
+                                SizedBox(width: 125),
+                                Text("RM350",
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        color: Colors.black.withOpacity(0.4))),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
 
-                          SizedBox(height: 35),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Rent From",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              SizedBox(width: 73),
-                              Text(
-                                "RM30",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 3),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Retail Value",
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black.withOpacity(0.4)),
-                              ),
-                              SizedBox(width: 60),
-                              Text("RM350",
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.black.withOpacity(0.4))),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(width: 20),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                        color: Colors.white,
-                      ),
-                      width: 180,
-                      height: 140,
-                      child: Column(
-                        children: [
-                          SizedBox(height: 5),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Kay Unger",
-                                style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(width: 80),
-                              GestureDetector(
-                                onTap: () {
-                                  final snackBar = SnackBar(
-                                    elevation: 0,
-                                    behavior: SnackBarBehavior.floating,
-                                    backgroundColor: Colors.transparent,
-                                    content: AwesomeSnackbarContent(
-                                      title: "Added To Favourites",
-                                      message:
-                                          "See all saved outfits in Favourites Page!",
-                                      contentType: ContentType.success,
-                                      color: Color.fromARGB(255, 197, 157, 134),
-                                    ),
-                                  );
-                                  ScaffoldMessenger.of(context)
-                                    ..hideCurrentSnackBar()
-                                    ..showSnackBar(snackBar);
-                                },
-                                child: Icon(
-                                  Icons.favorite_border,
-                                  size: 23,
-                                ),
-                              )
-                            ],
-                          ),
-                          SizedBox(height: 5),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Delfina Statement",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Sleeve Gown",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 17),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Rent From",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              SizedBox(width: 73),
-                              Text(
-                                "RM30",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 3),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Retail Value",
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black.withOpacity(0.4)),
-                              ),
-                              SizedBox(width: 60),
-                              Text("RM350",
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.black.withOpacity(0.4))),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 60),
-                Row(
-                  //Picture on the second row
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      child: Image.asset(
-                        "assets/outfit1(front).jpg",
-                        width: 180,
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Product1Page(),
-                            ));
-                      },
-                    ),
-                    SizedBox(width: 20),
-                    GestureDetector(
-                      child: Image.asset(
-                        "assets/outfit2(front).jpg",
-                        width: 180,
-                      ),
-                      onTap: (){
-                        Navigator.push(
+                      SizedBox(height: 50,),
+                GestureDetector(child: Image.asset("assets/outfit2(front).jpg",width: 400, height: 400,),onTap: (){
+                  Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => Product2Page(),
                             ));
-                      },
-                    ),
-                  ],
-                ),
-                Row(
-                  //Info on the product on second row
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                        color: Colors.white,
-                      ),
-                      width: 180,
-                      height: 150,
-                      child: Column(
-                        children: [
-                          SizedBox(height: 5),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Peter Som Collective",
-                                style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(width: 9),
-                              GestureDetector(
-                                onTap: () {
-                                  final snackBar = SnackBar(
-                                    elevation: 0,
-                                    behavior: SnackBarBehavior.floating,
-                                    backgroundColor: Colors.transparent,
-                                    content: AwesomeSnackbarContent(
-                                      title: "Added To Favourites",
-                                      message:
-                                          "See all saved outfits in Favourites Page!",
-                                      contentType: ContentType.success,
-                                      color: Color.fromARGB(255, 197, 157, 134),
-                                    ),
-                                  );
-                                  ScaffoldMessenger.of(context)
-                                    ..hideCurrentSnackBar()
-                                    ..showSnackBar(snackBar);
-                                },
-                                child: Icon(
-                                  Icons.favorite_border,
-                                  size: 23,
-                                ),
-                              )
-                            ],
-                          ),
-                          SizedBox(height: 3),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Navy Smoked Top",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 30),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Rent From",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              SizedBox(width: 73),
-                              Text(
-                                "RM30",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 3),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Retail Value",
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black.withOpacity(0.4)),
-                              ),
-                              SizedBox(width: 60),
-                              Text("RM350",
+                },),
+                Container(    //container for the product info
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          color: Colors.white,
+                        ),
+                        width: 270,   //width and height of the container
+                        height: 160,
+                        child: Column(
+                          children: [
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Peter Som Collective",
                                   style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.black.withOpacity(0.4))),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(width: 20),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                        color: Colors.white,
-                      ),
-                      width: 180,
-                      height: 150,
-                      child: Column(
-                        children: [
-                          SizedBox(height: 5),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Peter Som Collective",
-                                style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(width: 9),
-                              GestureDetector(
-                                onTap: () {
-                                  final snackBar = SnackBar(
-                                    elevation: 0,
-                                    behavior: SnackBarBehavior.floating,
-                                    backgroundColor: Colors.transparent,
-                                    content: AwesomeSnackbarContent(
-                                      title: "Added To Favourites",
-                                      message:
-                                          "See all saved outfits in Favourites Page!",
-                                      contentType: ContentType.success,
-                                      color: Color.fromARGB(255, 197, 157, 134),
-                                    ),
-                                  );
-                                  ScaffoldMessenger.of(context)
-                                    ..hideCurrentSnackBar()
-                                    ..showSnackBar(snackBar);
-                                },
-                                child: Icon(
-                                  Icons.favorite_border,
-                                  size: 23,
+                                      fontSize: 16, fontWeight: FontWeight.bold),
                                 ),
-                              )
-                            ],
-                          ),
-                          SizedBox(height: 3),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Blue Floral Belted Dress",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 30),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Rent From",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              SizedBox(width: 73),
-                              Text(
-                                "RM30",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 3),
-                          Row(
-                            children: [
-                              SizedBox(width: 5),
-                              Text(
-                                "Retail Value",
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black.withOpacity(0.4)),
-                              ),
-                              SizedBox(width: 60),
-                              Text("RM350",
+                                SizedBox(width: 50),    //Space between the brand name and icon
+                                
+                                  GestureDetector(    //Detect if the icon is pressed
+                                    onTap: () {   
+                                      final snackBar = SnackBar(    //Display snackbar if the favourite icon is tapped
+                                        elevation: 0,
+                                        behavior: SnackBarBehavior.floating,
+                                        backgroundColor: Colors.transparent,
+                                        content: AwesomeSnackbarContent(
+                                          title: "Added To Favourites",
+                                          message:
+                                              "See all saved outfits in Favourites Page!",
+                                          contentType: ContentType.success,
+                                          color: Color.fromARGB(255, 197, 157, 134),
+                                        ),
+                                      );
+                                      ScaffoldMessenger.of(context)
+                                        ..hideCurrentSnackBar()
+                                        ..showSnackBar(snackBar);
+                                    },
+                                    child: Icon( 
+                                      Icons.favorite_border,
+                                      size: 25,
+                                    ),
+                                  ),
+                                
+                              ],
+                            ),
+                            SizedBox(height: 3),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Blue Floral Belted Dress",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ],
+                            ),
+                      
+                            SizedBox(height: 35),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Rent From",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                                SizedBox(width: 140),
+                                Text(
+                                  "RM30",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 3),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Retail Value",
                                   style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.black.withOpacity(0.4))),
-                            ],
-                          ),
-                        ],
+                                      fontSize: 13,
+                                      color: Colors.black.withOpacity(0.4)),
+                                ),
+                                SizedBox(width: 125),
+                                Text("RM350",
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        color: Colors.black.withOpacity(0.4))),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 60),
-              
-              ],
-            ),
-          ),
-        ));
+
+                  SizedBox(height: 50,),
+                GestureDetector(child: Image.asset("assets/outfit1(front).jpg",width: 400, height: 400,), onTap: (){
+                  Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Product1Page(),
+                            ));
+                },),
+                Container(    //container for the product info
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          color: Colors.white,
+                        ),
+                        width: 270,   //width and height of the container
+                        height: 160,
+                        child: Column(
+                          children: [
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Peter Som Collective",
+                                  style: TextStyle(
+                                      fontSize: 16, fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(width: 50),    //Space between the brand name and icon
+                                
+                                  GestureDetector(    //Detect if the icon is pressed
+                                    onTap: () {   
+                                      final snackBar = SnackBar(    //Display snackbar if the favourite icon is tapped
+                                        elevation: 0,
+                                        behavior: SnackBarBehavior.floating,
+                                        backgroundColor: Colors.transparent,
+                                        content: AwesomeSnackbarContent(
+                                          title: "Added To Favourites",
+                                          message:
+                                              "See all saved outfits in Favourites Page!",
+                                          contentType: ContentType.success,
+                                          color: Color.fromARGB(255, 197, 157, 134),
+                                        ),
+                                      );
+                                      ScaffoldMessenger.of(context)
+                                        ..hideCurrentSnackBar()
+                                        ..showSnackBar(snackBar);
+                                    },
+                                    child: Icon( 
+                                      Icons.favorite_border,
+                                      size: 25,
+                                    ),
+                                  ),
+                                
+                              ],
+                            ),
+                            SizedBox(height: 3),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Navy Smoked Top",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ],
+                            ),
+                      
+                            SizedBox(height: 35),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Rent From",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                                SizedBox(width: 140),
+                                Text(
+                                  "RM30",
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 3),
+                            Row(
+                              children: [
+                                SizedBox(width: 5),
+                                Text(
+                                  "Retail Value",
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      color: Colors.black.withOpacity(0.4)),
+                                ),
+                                SizedBox(width: 125),
+                                Text("RM350",
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        color: Colors.black.withOpacity(0.4))),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(height: 30),
+              ]
+            )
+          )
+        )
+    );
   }
 }
+
+                
+               

@@ -31,11 +31,11 @@ class _HomePageState extends State<HomePage> {
               ),
               Text(
                 "FANCY DINNER? SPECIAL ANNIVERSARY?",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               Text(
                 "NIGHTS OUT? WE GOT YOU COVERED!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 40,
