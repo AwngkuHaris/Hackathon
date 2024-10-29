@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:accordion/accordion.dart';
-import 'package:hackathon_app/Util/date_n_size_picker.dart';
+import 'package:hackathon_app/Util/date_n_size_picker.dart';    // Import the DateNSizePicker widget
 
 
 class Product1Page extends StatefulWidget {
@@ -12,49 +12,50 @@ class Product1Page extends StatefulWidget {
 
 class _Product1PageState extends State<Product1Page> {
 
-  void _chooseSizeAndDate(){
+  // Function to open the date and size picker dialog when the "Rent Outfit" button is clicked
+  void _chooseSizeAndDate(){    
     showDialog(context: context, builder: (context){
-      return DateNSizePicker();
+      return DateNSizePicker();   // Displays a dialog for choosing size and date
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFFF5EBE0),
+      backgroundColor: Color(0XFFF5EBE0),   // Background color for the page
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white,    // White app bar
       ),
-      body: SingleChildScrollView(
+      body: SingleChildScrollView(    // Allows scrolling if the content overflows
         child: Column(
           children: [
             SizedBox(
-              height: 20,
+              height: 20,   // Spacing before the images
             ),
             SizedBox(
-              height: 400,
+              height: 400,    // Sets the height for the horizontal scrolling images
               child: ListView(
-                scrollDirection: Axis.horizontal,
+                scrollDirection: Axis.horizontal,   // Allows horizontal scrolling of images
                 children: [
                   SizedBox(
                     height: 20,
                   ),
                   Image.asset(
-                    "assets/outfit1(front).jpg",
+                    "assets/outfit1(front).jpg",    // Displays front view of the outfit
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 5,   // Spacing between images
+                  ),
+                  Image.asset(
+                    "assets/outfit1(back).jpg",     // Displays back view of the outfit
                     fit: BoxFit.cover,
                   ),
                   SizedBox(
                     width: 5,
                   ),
                   Image.asset(
-                    "assets/outfit1(back).jpg",
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Image.asset(
-                    "assets/outfit1(pose).jpg",
+                    "assets/outfit1(pose).jpg",     // Displays model pose of the outfit
                     fit: BoxFit.cover,
                   ),
                   SizedBox(
@@ -64,14 +65,14 @@ class _Product1PageState extends State<Product1Page> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 20,     // Spacing between the images and stars
             ),
             Row(
-              //For reviews star
+              // Display star ratings for the product
 
               children: [
                 SizedBox(
-                  width: 20,
+                  width: 20,    // Spacing before the stars
                 ),
                 Icon(
                   Icons.star,
@@ -96,11 +97,11 @@ class _Product1PageState extends State<Product1Page> {
                 SizedBox(
                   width: 8,
                 ),
-                Text("(55)"),
+                Text("(55)"),   // Number of reviews
               ],
             ),
             SizedBox(
-              height: 30,
+              height: 30,   // Spacing before the product name
             ),
             Padding(
               padding:
@@ -108,7 +109,7 @@ class _Product1PageState extends State<Product1Page> {
               child: Align(
                 alignment: Alignment.centerLeft, // Aligns the text to the left
                 child: Text(
-                  "Peter Som Collective",
+                  "Peter Som Collective",   //product brand name
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -122,13 +123,13 @@ class _Product1PageState extends State<Product1Page> {
               child: Align(
                 alignment: Alignment.centerLeft, // Aligns the text to the left
                 child: Text(
-                  "Navy Smoked Top",
+                  "Navy Smoked Top",    //product title
                   style: TextStyle(fontSize: 15),
                 ),
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 30,   // Vertical spacing before the price
             ),
             Padding(
               padding:
@@ -136,7 +137,7 @@ class _Product1PageState extends State<Product1Page> {
               child: Align(
                 alignment: Alignment.centerLeft, // Aligns the text to the left
                 child: Text(
-                  "Rent From : Rm30",
+                  "Rent From : Rm30",   // rental price
                   style: TextStyle(fontSize: 15),
                 ),
               ),
@@ -150,51 +151,51 @@ class _Product1PageState extends State<Product1Page> {
               child: Align(
                 alignment: Alignment.centerLeft, // Aligns the text to the left
                 child: Text(
-                  "Retail Value : Rm350",
+                  "Retail Value : Rm350",   // Retail price
                   style: TextStyle(
                       fontSize: 15, color: Colors.black.withOpacity(0.4)),
                 ),
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 40,     //Vertical spacing before button
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  foregroundColor: Colors.white,
-                  fixedSize: Size(270, 60),
+                  backgroundColor: Colors.black,    // Black button background
+                  foregroundColor: Colors.white,    // White text color
+                  fixedSize: Size(270, 60),           // Button size
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10)),   // Rounded edges
                 ),
                 onPressed: () {
-                  _chooseSizeAndDate();
+                  _chooseSizeAndDate();   // Calls the function to show size and date picker
                 },
                 child: Text(
-                  "Rent Outfit",
+                  "Rent Outfit",    // Button text
                   style: TextStyle(fontSize: 17),
                 )),
             SizedBox(
-              height: 40,
+              height: 40,   // Spacing before the reviews section
             ),
             Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: const Color.fromARGB(255, 241, 225, 176),
+                borderRadius: BorderRadius.circular(10),    // Rounded edges
+                color: const Color.fromARGB(255, 241, 225, 176),    // Background color for review box
               ),
-              width: 350,
+              width: 350,   //width and height for the review box 
               height: 350,
               child: Column(
                 children: [
                   SizedBox(
-                    height: 18,
+                    height: 18,   // Spacing at the top of the review section
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "Ratings & Reviews",
+                        "Ratings & Reviews",    // Section title
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
@@ -203,7 +204,7 @@ class _Product1PageState extends State<Product1Page> {
                     ),
                   ),
                   Row(
-                    //For reviews star
+                    // Displays overall star ratings
 
                     children: [
                       SizedBox(
@@ -232,19 +233,19 @@ class _Product1PageState extends State<Product1Page> {
                       SizedBox(
                         width: 8,
                       ),
-                      Text("(55)"),
+                      Text("(55)"),   // Number of reviews
                     ],
                   ),
                   SizedBox(
-                    height: 30,
+                    height: 30,   // Spacing before the first progress bar
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: LinearProgressIndicator(
                       minHeight: 18,
-                      value: 0.7, // 70% progress
+                      value: 0.7, // 70% indicating "True to Size"
                       backgroundColor: Colors.grey[300],
-                      color: Colors.brown,
+                      color: Colors.brown,    // Progress bar color
                     ),
                   ),
                   SizedBox(
@@ -255,7 +256,7 @@ class _Product1PageState extends State<Product1Page> {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "True To Size",
+                        "True To Size",   // Text label for the progress bar
                         style: TextStyle(
                           fontSize: 15,
                         ),
@@ -269,9 +270,9 @@ class _Product1PageState extends State<Product1Page> {
                     padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: LinearProgressIndicator(
                       minHeight: 18,
-                      value: 0.6, // 70% progress
+                      value: 0.6, // 60% indicating "Would Rent Again"
                       backgroundColor: Colors.grey[300],
-                      color: Colors.brown,
+                      color: Colors.brown,    // Progress bar color
                     ),
                   ),
                   SizedBox(
@@ -282,7 +283,7 @@ class _Product1PageState extends State<Product1Page> {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "Would Rent Again",
+                        "Would Rent Again",   // Text label for the progress bar
                         style: TextStyle(
                           fontSize: 15,
                         ),
@@ -296,9 +297,9 @@ class _Product1PageState extends State<Product1Page> {
                     padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: LinearProgressIndicator(
                       minHeight: 18,
-                      value: 0.9, // 70% progress
+                      value: 0.9, // 90% indicating "Worth Every Penny"
                       backgroundColor: Colors.grey[300],
-                      color: Colors.brown,
+                      color: Colors.brown,    // Progress bar color
                     ),
                   ),
                   SizedBox(
@@ -309,7 +310,7 @@ class _Product1PageState extends State<Product1Page> {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "Worth Every Penny",
+                        "Worth Every Penny",    // Text label for the progress bar
                         style: TextStyle(
                           fontSize: 15,
                         ),
@@ -320,33 +321,33 @@ class _Product1PageState extends State<Product1Page> {
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 40,   // Spacing before the accordion sections
             ),
             Accordion(
-              disableScrolling: true,
+              disableScrolling: true,   // Enable scrolling within the accordion section
               children: [
                 AccordionSection(
                   header: Text(
-                    "Product Details",
+                    "Product Details",    // Accordion header title
                     style: TextStyle(fontSize: 15),
                   ),
                   content: Text(
                       "This navy top by Peter Som Collective features smocked detailing, adding texture and interest to the classic navy hue. Pair with white linen pants for a casual yet polished look.",),
-                  isOpen: true,
+                  isOpen: true,             // Opens the first accordion section by default
                   headerBorderWidth: 1,
-                  headerPadding: EdgeInsets.all(15),
+                  headerPadding: EdgeInsets.all(15),    // Padding around the accordion header
                   headerBackgroundColor:
-                      const Color.fromARGB(255, 241, 225, 176),
-                  headerBorderColor: Colors.black,
-                  headerBorderColorOpened: Colors.black,
-                  contentBorderColor: Colors.black,
-                  contentHorizontalPadding: 25,
+                      const Color.fromARGB(255, 241, 225, 176),   // Accordion header background color
+                  headerBorderColor: Colors.black,    // Border color for closed accordion header
+                  headerBorderColorOpened: Colors.black,    // Border color for opened accordion header
+                  contentBorderColor: Colors.black,   // Border color for accordion content
+                  contentHorizontalPadding: 25,     // Padding around accordion content
                   contentVerticalPadding: 25,
                 )
               ],
             ),
             Accordion(
-              disableScrolling: true,
+              disableScrolling: true,   // Enable scrolling within the accordion section
               children: [
                 AccordionSection(
                   header: Text(
