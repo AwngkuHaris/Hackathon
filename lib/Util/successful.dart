@@ -17,7 +17,7 @@ class SuccessfulCheckout extends StatelessWidget {
               height: 25,
             ),
 
-            Text("Payment Successful!", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+            Text("Payment Successful!", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
 
              SizedBox(
               height: 45,

@@ -9,11 +9,12 @@ class CheckoutPage extends StatefulWidget {
 }
 
 class _CheckoutPageState extends State<CheckoutPage> {
-
-    void _successfulCheckout(){
-    showDialog(context: context, builder: (context){
-      return SuccessfulCheckout();
-    });
+  void _successfulCheckout() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return SuccessfulCheckout();
+        });
   }
 
   @override
@@ -45,34 +46,12 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    width: 175,
-                    height: 75,
-                    child: TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(), labelText: 'First Name'),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    width: 175,
-                    height: 75,
-                    child: TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(), labelText: 'Last Name'),
-                    ),
-                  ),
-                ],
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(), labelText: 'Full Name'),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.all(15),
@@ -90,7 +69,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: 15,
                   ),
                   Container(
-                    width: 175,
+                    width: 150,
                     height: 75,
                     child: TextField(
                       decoration: InputDecoration(
@@ -101,7 +80,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: 15,
                   ),
                   Container(
-                    width: 175,
+                    width: 150,
                     height: 75,
                     child: TextField(
                       decoration: InputDecoration(
@@ -119,7 +98,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: 15,
                   ),
                   Container(
-                    width: 175,
+                    width: 150,
                     height: 75,
                     child: TextField(
                       decoration: InputDecoration(
@@ -130,7 +109,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: 15,
                   ),
                   Container(
-                    width: 175,
+                    width: 150,
                     height: 75,
                     child: TextField(
                       decoration: InputDecoration(
@@ -140,9 +119,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   ),
                 ],
               ),
-        
-              SizedBox(height:10),
-        
+              SizedBox(height: 10),
               Align(
                 alignment: Alignment.centerLeft, // Align to the left
                 child: Padding(
@@ -167,18 +144,19 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     width: 15,
                   ),
                   Container(
-                    width: 175,
+                    width: 150,
                     height: 75,
                     child: TextField(
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(), labelText: 'Exp. (MM/YY)'),
+                          border: OutlineInputBorder(),
+                          labelText: 'Exp. (MM/YY)'),
                     ),
                   ),
                   SizedBox(
                     width: 15,
                   ),
                   Container(
-                    width: 175,
+                    width: 150,
                     height: 75,
                     child: TextField(
                       decoration: InputDecoration(
@@ -188,52 +166,57 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   ),
                 ],
               ),
-        
               Container(
                 width: 400,
                 height: 160,
                 color: Colors.black,
-        
                 child: Column(
                   children: [
-                    SizedBox(height: 10,),
-                    Text("Membership Subscription",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
-                    SizedBox(height: 40,),
-        
-                    
-
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "Membership Subscription",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
                     Row(
                       children: [
-                        SizedBox(width: 30,),
-                        Text("Total:RM99",style: TextStyle(color: Colors.white,fontSize: 18),),
-                        SizedBox(width: 90,),
-
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Text(
+                          "Total:RM99",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                        SizedBox(
+                          width: 50,
+                        ),
                         ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                            backgroundColor: Colors.white,
-                                            foregroundColor: Colors.black,
-                                            fixedSize: Size(150, 50),
-                                            shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                                          ),
-                                          onPressed: () {
-                                            _successfulCheckout();
-                                          },
-                                          child: Text(
-                                            "Place Order",
-                                            style: TextStyle(fontSize: 15),
-                                          )),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              foregroundColor: Colors.black,
+                              fixedSize: Size(150, 50),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                            ),
+                            onPressed: () {
+                              _successfulCheckout();
+                            },
+                            child: Text(
+                              "Place Order",
+                              style: TextStyle(fontSize: 15),
+                            )),
                       ],
-                      
-                       
                     ),
-        
-        
                   ],
-        
                 ),
               )
-              
             ],
           ),
         ),

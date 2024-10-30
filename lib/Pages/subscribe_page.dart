@@ -175,32 +175,39 @@ class SubscribePage extends StatelessWidget {
                     height: 20,
                   ),
                   Image.asset(
-                    "assets/outfit1(pose).jpg",
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(
-                    width: 1,
-                  ),
-                  Image.asset(
                     "assets/outfit2(pose).jpg",
                     fit: BoxFit.cover,
                   ),
                   SizedBox(
-                    width: 1,
+                    width: 5,
+                  ),
+                  Image.asset(
+                    "assets/Dress.JPG",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    "assets/outfit1(pose).jpg",
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 5,
                   ),
                   Image.asset(
                     "assets/outfit4(pose).jpg",
                     fit: BoxFit.cover,
                   ),
                   SizedBox(
-                    width: 1,
+                    width: 5,
                   ),
                   Image.asset(
                     "assets/outfit3(pose).jpg",
                     fit: BoxFit.cover,
                   ),
                   SizedBox(
-                    width: 1,
+                    width: 5,
                   ),
                   Image.asset(
                     "assets/Dress2.jpg",
