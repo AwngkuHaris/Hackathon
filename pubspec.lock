@@ -65,14 +65,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
-  date_range_form_field:
-    dependency: "direct main"
-    description:
-      name: date_range_form_field
-      sha256: "3ba95d6431073e272183bbaa3e0d99e415adb559f5a83e6448d63863286566a4"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.2"
   fake_async:
     dependency: transitive
     description:
@@ -115,14 +107,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.6.6"
-  intl:
-    dependency: transitive
-    description:
-      name: intl
-      sha256: "910f85bce16fb5c6f614e117efa303e85a1731bb0081edf3604a2ae6e9a3cc91"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.17.0"
   leak_tracker:
     dependency: transitive
     description:

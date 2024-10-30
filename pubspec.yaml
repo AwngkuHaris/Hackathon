@@ -13,7 +13,6 @@ dependencies:
   flutter:
     sdk: flutter
   
-  date_range_form_field: ^1.0.2
   cupertino_icons: ^1.0.8
   accordion: ^2.6.0
   awesome_snackbar_content: ^0.1.1
